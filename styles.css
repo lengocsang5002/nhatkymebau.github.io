@@ -250,7 +250,7 @@ html, body {
 #stage-2 #next-btn-dragon { position: absolute; bottom: 40px; padding: 12px 30px; background-color: #00838f; color: white; border: none; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s; outline: none; -webkit-appearance: none; z-index: 100; }
 
 /* --- STAGE 3: BODY SCAN --- */
-#stage-3 #guide-text-body { position: absolute; top: 5%; width: 85%; text-align: center; font-size: 21px; color: #004d40; font-weight: 600; min-height: 60px; transition: opacity 0.5s; text-shadow: 1px 1px 5px rgba(255,255,255,0.8); z-index: 10; }
+#stage-3 #guide-text-body { position: absolute; top: 12%; width: 85%; text-align: center; font-size: 21px; color: #004d40; font-weight: 600; min-height: 60px; transition: opacity 0.5s; text-shadow: 1px 1px 5px rgba(255,255,255,0.8); z-index: 10; }
 #stage-3 #meditation-container { position: relative; width: 320px; height: 480px; margin-top: 30px; }
 
 /* CSS CHO SVG THAI PHỤ */
@@ -644,6 +644,7 @@ html, body {
     transform: scale(1.02);    
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
+
 
 
 
