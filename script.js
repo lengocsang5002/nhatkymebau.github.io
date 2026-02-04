@@ -755,7 +755,7 @@ function handleDotClick(idx) {
     faceTimeout = setTimeout(() => {
         if(sadFace) sadFace.style.display = 'block'; // Hiện lại mặt buồn
         if(happyFace) happyFace.style.display = 'none'; // Ẩn mặt vui đi
-    }, 5000); 
+    }, 3000); 
     // --- KẾT THÚC ĐOẠN CODE ĐIỀU KHIỂN CƯỜI ---
 
     if(navigator.vibrate) navigator.vibrate(50);
@@ -772,7 +772,7 @@ function handleDotClick(idx) {
     });
 
     s3_currentStep++; 
-    setTimeout(() => activateStepBody(s3_currentStep), 5000);
+    setTimeout(() => activateStepBody(s3_currentStep), 3000);
 }
 
 // 3. HÀM KÍCH HOẠT BƯỚC MỚI
