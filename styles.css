@@ -121,7 +121,16 @@ html, body {
     animation: floatUp 1s ease-out;
 }
 #stage-1 .garden-scene { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; }
-#stage-1 .fountain { position: absolute; top: -5%; left: 50%; transform: translate(-50%, -50%); font-size: 100px; opacity: 0.8; z-index: 5; transition: opacity 1s; }
+#stage-1 .fountain { 
+    position: relative !important; 
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important; 
+    font-size: 100px !important; 
+    margin-bottom: 300px !important; 
+    opacity: 1 !important; 
+    z-index: 5; 
+}
 
 #monkey-metaphor {
     position: absolute;
@@ -182,7 +191,7 @@ html, body {
 }
 #stage-1 #stop-btn { width: 100px; height: 100px; border-radius: 50%; background-color: #ff5722; border: 5px solid white; color: white; font-size: 40px; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.1s, background 0.3s; display: flex; align-items: center; justify-content: center; -webkit-appearance: none; outline: none; }
 #stage-1 #stop-btn:active { transform: scale(0.92); background-color: #d84315; }
-#stage-1 #guide-text-s1 { color: #1b5e20; font-size: 16px; margin-top: 15px; text-align: center; max-width: 80%; min-height: 40px; font-weight: 500; }
+#stage-1 #guide-text-s1 { color: #1b5e20; font-size: 16xpx; margin-top: 15px; text-align: center; max-width: 80%; min-height: 40px; font-weight: 500; }
 #stage-1 #success-panel { display: none; flex-direction: column; align-items: center; text-align: center; padding: 0 20px; animation: fadeIn 1s; }
 #stage-1 .congrats-text { color: #2e7d32; font-size: 18px; margin-bottom: 20px; line-height: 1.5; background: rgba(255,255,255,0.7); padding: 15px; border-radius: 15px; }
 #stage-1 .next-btn { padding: 12px 35px; background: #00897b; color: white; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.2); cursor: pointer; animation: pulseBtn 2s infinite; }
@@ -191,7 +200,18 @@ html, body {
 #stage-1 .fade-out { transition: opacity 1.5s, transform 1.5s; opacity: 0; transform: scale(0); }
 
 /* --- STAGE 2: DRAGON --- */
-#stage-2 #instruction-dragon { position: absolute; top: 10%; width: 100%; font-size: 24px; color: #006064; text-align: center; font-weight: bold; transition: color 0.3s; z-index: 20; }
+#stage-2 #instruction-dragon { 
+    position: relative !important; 
+    top: auto !important; 
+    margin-bottom: 120px !important; /* Chỉnh số này càng to thì chữ càng xích lên cao */
+    width: 100%; 
+    font-size: 28px !important; /* Chữ to hơn một chút */
+    color: #006064; 
+    text-align: center; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+    z-index: 20; 
+}
 #stage-2 .game-scene { display: flex; align-items: center; justify-content: center; gap: 40px; transform: scale(0.95); margin-top: -50px; }
 #stage-2 .dragon-container { position: relative; width: 150px; height: 180px; }
 #stage-2 .head { position: absolute; top: 0; left: 20px; width: 95px; height: 85px; background-color: #66bb6a; border-radius: 45px 45px 25px 25px; z-index: 5; box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1); }
@@ -287,7 +307,7 @@ html, body {
 @media (max-width: 400px) { #stage-4 .emotion-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* --- STAGE 5: CLOUDS --- */
-#stage-5 .sun { position: absolute; top: 40px; right: 40px; width: 70px; height: 70px; background: #FFD700; border-radius: 50%; box-shadow: 0 0 50px #FFD700; opacity: 0.9; }
+#stage-5 .sun { position: absolute; top: 40px; right: 200px !important; width: 70px; height: 70px; background: #FFD700; border-radius: 50%; box-shadow: 0 0 50px #FFD700; opacity: 0.9; }
 #stage-5 #input-container-cloud { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 100; text-align: center; transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 85%; max-width: 400px; opacity: 1; pointer-events: auto; }
 #stage-5 #input-container-cloud.hidden { opacity: 0; pointer-events: none; bottom: -300px; transform: translateX(-50%) scale(0.8); }
 #stage-5 h2 { color: #00838F; margin-top: 0; margin-bottom: 10px; font-size: 22px; font-weight: 700; }
@@ -442,8 +462,8 @@ html, body {
 #stage-6 .small-heart::before, #stage-6 .small-heart::after { content: ""; position: absolute; width: 40px; height: 40px; background-color: #e91e63; border-radius: 50%; }
 #stage-6 .small-heart::before { top: -20px; left: 0; }
 #stage-6 .small-heart::after { left: 20px; top: 0; }
-#stage-6 #final-message { position: absolute; bottom: 110px; font-size: 22px; color: #880e4f; text-align: center; opacity: 0; font-weight: bold; transition: opacity 2s; width: 90%; }
-#stage-6 #continue-btn-jar { position: absolute; bottom: 40px; background-color: #ad1457; display: none; opacity: 0; transition: opacity 1s; }
+#stage-6 #final-message { position: absolute; bottom: 300px !important; font-size: 30px !important; color: #880e4f; text-align: center; opacity: 0; font-weight: bold; transition: opacity 2s; width: 90%; }
+#stage-6 #continue-btn-jar { position: absolute; bottom: 230px !important; background-color: #ad1457; display: none; opacity: 0; transition: opacity 1s; }
 
 /* ANIMATIONS CHUNG */
 @keyframes chaoticJump { 0% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(30px, -40px) rotate(10deg); } 50% { transform: translate(-20px, 40px) rotate(-10deg); } 75% { transform: translate(40px, -20px) rotate(5deg); } 100% { transform: translate(0, 0) rotate(0deg); } }
@@ -1291,8 +1311,274 @@ html, body {
     transform: scale(1.02);    
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
+/* =========================================
+   SỬA LỖI: ÉP CĂN GIỮA TOÀN BỘ CÁC MÀN HÌNH
+   ========================================= */
+
+/* 1. Ép màn hình 1 (Khỉ) tuân thủ luật căn giữa */
+#stage-1 { display: none; }
+#stage-1.active { display: flex !important; }
+
+/* 2. Màn hình 2 (Rồng): Bỏ ghim cứng chữ và nút, tạo khoảng cách tự nhiên */
+#stage-2 { gap: 15px !important; }
+#stage-2 #instruction-dragon { 
+    position: relative !important; 
+    top: auto !important; 
+    margin-bottom: 20px; 
+}
+#stage-2 #interaction-area, 
+#stage-2 #next-btn-dragon { 
+    position: relative !important; 
+    bottom: auto !important; 
+    margin-top: 10px; 
+}
+
+/* 3. Màn hình 3 (Body Scan cũ & mới): Bỏ ghim cứng dòng chữ hướng dẫn */
+#stage-3 #guide-text-body { 
+    position: relative !important; 
+    top: auto !important; 
+    margin-bottom: 30px; 
+}
+
+/* 4. Màn hình 5 (Đám mây): Mang hộp nhập liệu từ dưới đáy lên ngay chính giữa màn hình */
+#stage-5 #input-container-cloud { 
+    top: 50% !important; 
+    bottom: auto !important; 
+    transform: translate(-50%, -50%) !important; 
+}
+/* Hiệu ứng ẩn hộp nhập đám mây bay xuống dưới */
+#stage-5 #input-container-cloud.hidden { 
+    top: 150% !important; 
+    transform: translate(-50%, 0) scale(0.8) !important; 
+}
+/* =========================================
+   SỬA LỖI: ÉP CĂN GIỮA VÀ BỎ GHIM CỨNG
+   ========================================= */
+
+/* Ép các stage luôn dùng flex để tuân thủ luật căn giữa */
+.stage { display: none !important; }
+.stage.active { display: flex !important; }
+
+/* Màn hình Rồng: Gỡ ghim tuyệt đối, cho khoảng cách tự nhiên */
+#stage-2 { gap: 20px !important; }
+#stage-2 #instruction-dragon { position: relative !important; top: 0 !important; margin-bottom: 20px; }
+#stage-2 #interaction-area, #stage-2 #next-btn-dragon { position: relative !important; bottom: 0 !important; margin-top: 10px; }
+
+/* Màn hình Body Scan: Gỡ ghim chữ hướng dẫn */
+#stage-3 #guide-text-body { position: relative !important; top: 0 !important; margin-bottom: 30px; }
 
 
 
 
 
+/* ========== USEFULNESS EVAL SLIDERS ========== */
+.sat-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sat-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #d81b60;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.sat-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #d81b60;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+
+/* 2. Ép giao diện iPad tràn nền, nội dung gom gọn ở giữa */
+@media (min-width: 768px) {
+    .stage.active {
+        width: 100% !important;
+        max-width: 600px !important; /* MỞ RỘNG KHUNG TỪ 500px -> 600px ĐỂ CHỮ THOẢI MÁI GIÃN RA */
+        height: 100% !important; 
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important; 
+        
+        /* Nền trong suốt tràn viền */
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    /* 1. Dồn các phần tử vào giữa màn hình */
+    #stage-1 #top-message-area {
+        top: 20% !important; /* Đẩy câu nói xuống gần giữa hơn */
+    }
+    
+    #stage-1 #controls-container {
+        bottom: 22% !important; /* Kéo đài phun nước và nút lên gần giữa hơn */
+    }
+
+    /* 2. Phóng to các chi tiết ("bự ra 1 xí") */
+    #stage-1 .safe-quote {
+        font-size: 40px !important; /* Thu nhỏ 1 xíu để đủ chỗ cho chữ "toàn." */
+        width: 100% !important; /* Cho phép chữ giãn hết cỡ ra 2 mép màn hình */
+        max-width: 600px !important;
+        margin: 0 auto !important; 
+        padding: 0 10px !important; /* Ép lề nhỏ lại để chữ có không gian bơi lội */
+        line-height: 1.5 !important;
+        box-sizing: border-box !important;
+    }
+
+    #stage-1 .fountain {
+        font-size: 150px !important; /* Đài phun nước bự ra */
+        margin-bottom: 25px !important;
+    }
+
+    #stage-1 .congrats-text {
+        font-size: 20px !important; /* Chữ chúc mừng to rõ hơn */
+        padding: 20px 30px !important;
+        border-radius: 20px !important;
+    }
+
+    #stage-1 .next-btn {
+        font-size: 22px !important; /* Nút Tiếp tục bự ra */
+        padding: 16px 50px !important;
+        margin-top: 15px !important;
+    }
+}  
+
+
+@media (min-width: 768px) {
+    
+    /* 1. Tiêu đề chính (Giảm từ 45px -> 30px) */
+    #stage-pain-map h2 {
+        font-size: 30px !important; 
+        margin-bottom: 15px !important;
+    }
+
+    /* 2. Câu hướng dẫn (Giảm từ 24px -> 16px) */
+    #stage-pain-map p {
+        font-size: 16px !important; 
+        margin-bottom: 50px !important; /* Thu hẹp lại để không bị trống */
+    }
+
+    /* 3. Nhân vật và Chấm mỏi (Giảm scale từ 1.7 -> 1.2) */
+    #stage-pain-map #pain-map-svg-container {
+        transform: scale(1.2) !important; /* To lên 1.2 lần thay vì 1.7 lần */
+        transform-origin: top center !important; 
+        margin-bottom: 120px !important; /* Rút ngắn khoảng cách thừa bên dưới để nút xích lên */
+    }
+
+    /* 4. Nút "Chuyển sang Thư giãn" (Giảm từ 28px -> 18px, thu nhỏ đệm) */
+    #stage-pain-map .btn-start {
+        font-size: 18px !important;
+        padding: 14px 40px !important;
+        border-radius: 35px !important;
+        box-shadow: 0 8px 15px rgba(211, 47, 47, 0.3) !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+    
+    /* 1. Phóng to Câu hướng dẫn và đẩy nó xuống khỏi mép trên/nút Quay lại */
+    #stage-3 #guide-text-body {
+        font-size: 28px !important; 
+        margin-top: 80px !important; /* Đẩy chữ xuống thấp cho thoáng */
+        margin-bottom: 40px !important;
+        width: 90% !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 2. Phóng to Nhân vật (Scale 1.2 giống hệt trang Bản đồ mỏi) */
+    #stage-3 #meditation-container {
+        transform: scale(1.2) !important; 
+        transform-origin: top center !important;
+        margin-bottom: 120px !important; /* Khoảng trống cho các nút phía dưới */
+    }
+
+    /* 3. Phóng to cụm nút bấm (Tiếp tục hành trình / Thực hành lại) */
+    #stage-3 #action-buttons-body {
+        gap: 20px !important; /* Khoảng cách giữa 2 nút rộng ra */
+    }
+    
+    #stage-3 #action-buttons-body button {
+        font-size: 18px !important;
+        padding: 16px 40px !important;
+        width: 300px !important; /* Nút dài ra cho đẹp */
+        border-radius: 35px !important;
+    }
+}
+
+#stage-4 #feedback-screen {
+    width: 95% !important; 
+    max-width: 800px !important; 
+    padding: 30px 15px !important; /* Rút bớt lề bên trong hộp để chừa không gian cho chữ duỗi thẳng */
+    box-sizing: border-box !important;
+}
+
+#stage-4 .feedback-text {
+    font-size: 22px !important; 
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important; 
+    width: 100% !important;
+}
+
+#stage-4 .btn-next-capy {
+    font-size: 20px !important; 
+    padding: 15px 40px !important; 
+    border-radius: 35px !important;
+}
+
+/* 2. Riêng màn hình to (iPad) thì khung sẽ tự động to thêm và chữ bự hơn */
+@media (min-width: 768px) {
+    #stage-4 #feedback-screen {
+        padding: 50px 40px !important; 
+    }
+    
+    #stage-4 .feedback-text {
+        font-size: 25px !important; 
+    }
+    
+    #stage-4 .btn-next-capy {
+        font-size: 22px !important;
+        padding: 18px 50px !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+    #stage-6 .instruction-text {
+        font-size: 28px !important; /* Chữ hướng dẫn to rõ */
+        max-width: 80% !important; /* Cho chữ dàn ngang ra 2 bên */
+        margin: 0 auto 40px auto !important; /* Căn giữa hoàn hảo */
+    }
+    
+    #stage-6 .mantra {
+        font-size: 36px !important; /* Câu chúc siêu bự */
+        margin-bottom: 60px !important; /* Đẩy khoảng cách với nút rộng ra */
+    }
+    
+    #stage-6 #intro-screen-jar button,
+    #stage-6 #connect-btn-s6 {
+        font-size: 24px !important; /* Nút to dễ bấm */
+        padding: 20px 60px !important; /* Làm nút mập ú lên */
+    }
+}
